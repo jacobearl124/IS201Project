@@ -1,0 +1,106 @@
+
+/* .container {
+    height: 100vh;
+    width: 100%;
+    top: 100%;
+} */
+
+body {
+    background-color: lightblue;
+}
+
+.analysisheading {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#best {
+    font-family: monospace;
+    color: blue;
+}
+
+#Strategies {
+    font-size: larger;
+    font-family: monospace;
+    color: navy;
+}
+
+#youneed {
+    font-family: inherit;
+}
+
+#Names {
+    font-size: larger;
+    font-family: monospace;
+    color: darkblue;
+}
+
+.content {
+
+        background-color: #1e90ff; /* Dodger Blue */
+        color: white;
+        padding: 20px;
+        text-align: center;
+}
+
+.footer {
+    background-color: #333; /* Dark gray */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+.footer a {
+    color: #1e90ff; /* Dodger Blue */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Return to Top Link Styling */
+.return-to-top {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.return-to-top:hover {
+    background-color: #104e8b; /* Darker blue */
+}
+
+
+/* Navigation Bar Styling */
+.navbar {
+    display: flex; /* Arrange links horizontally */
+    justify-content: center; /* Center the links */
+    background-color: #333; /* Dark background */
+    padding: 10px; /* Add spacing around links */
+    position: sticky; /* Keep navbar visible when scrolling */
+    top: 0; /* Stick it to the top */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.navbar a {
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    margin: 0 15px; /* Spacing between links */
+    font-family: "Arial, sans-serif"; /* Font style */
+    font-size: 1em; /* Adjust font size */
+    padding: 8px 15px; /* Add spacing around text */
+    border-radius: 5px; /* Round corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar a:hover {
+    background-color: #1e90ff; /* Highlight on hover */
+    color: #fff; /* Keep text white on hover */
+}

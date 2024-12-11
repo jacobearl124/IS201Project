@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <a href="index.html">Resume</a>
+    <a href="fromscratch.html">FantasyFootballPage</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 20px;
+        }
+        .joke-box {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .category {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Joke Generator!</h1>
+    <p>Choose your joke category and press the button to get a new joke.</p>
+
+    <div class="category">
+        <label for="category">Choose a category:</label>
+        <select id="category">
+            <option value="dad">Dad Jokes</option>
+            <option value="knock-knock">Knock-Knock Jokes</option>
+            <option value="pun">Pun Jokes</option>
+        </select>
+    </div>
+
+    <div class="joke-box">
+        <p id="joke">Click the button below to get a joke!</p>
+        <button class="button" onclick="generateJoke()">Get a Joke</button>
+    </div>
+
+    <script>
+        const jokes = {
+            dad: [
+                "Why don't skeletons fight each other? They don't have the guts.",
+                "I'm reading a book on anti-gravity. It's impossible to put down!",
+                "Why did the scarecrow win an award? Because he was outstanding in his field!"
+            ],
+            'knock-knock': [
+                "Knock knock. Who’s there? Lettuce. Lettuce who? Lettuce in, it’s freezing out here!",
+                "Knock knock. Who’s there? Cow says. Cow says who? No silly, cow says moo!",
+                "Knock knock. Who’s there? Tank. Tank who? You’re welcome!"
+            ],
+            pun: [
+                "I don’t trust stairs because they’re always up to something.",
+                "I used to be a baker, but I couldn’t make enough dough.",
+                "I told my computer I needed a break, and now it won’t stop sending me Kit-Kats."
+            ]
+        };
+
+        function generateJoke() {
+            const category = document.getElementById('category').value;
+            const jokeArray = jokes[category];
+            const randomJoke = jokeArray[Math.floor(Math.random() * jokeArray.length)];
+            document.getElementById('joke').textContent = randomJoke;
+        }
+    </script>
+
+</body>
+</html>
